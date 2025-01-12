@@ -4,7 +4,7 @@ NORMAL := $(shell tput sgr0)
 GREEN := $(shell tput setaf 2)
 RED := $(shell tput setaf 1)
 
-.PHONY: help install update clean lint format test build run tidy shell setup recreate
+.PHONY: help install update clean lint format spec build run tidy shell setup recreate
 
 help:
 	@echo "$(BOLD)Available commands:$(NORMAL)"
@@ -13,7 +13,7 @@ help:
 	@echo "$(GREEN)make clean$(NORMAL)         - Remove build artifacts"
 	@echo "$(GREEN)make lint$(NORMAL)          - Check code style with golangci-lint"
 	@echo "$(GREEN)make format$(NORMAL)        - Format code with gofmt"
-	@echo "$(GREEN)make test$(NORMAL)          - Run tests"
+	@echo "$(GREEN)make spec$(NORMAL)          - Run specs"
 	@echo "$(GREEN)make build$(NORMAL)         - Build the Go binary"
 	@echo "$(GREEN)make run$(NORMAL)           - Run the application"
 	@echo "$(GREEN)make tidy$(NORMAL)          - Clean up go.mod and go.sum"
@@ -51,7 +51,7 @@ format:
 	goimports -w .
 	@echo "$(GREEN)Formatting complete!$(NORMAL)"
 
-test:
+spec:
 	@echo "$(BOLD)Running tests...$(NORMAL)"
 	go test ./... -cover || (echo "$(RED)Tests failed!$(NORMAL)" && exit 1)
 	@echo "$(GREEN)Tests passed!$(NORMAL)"
