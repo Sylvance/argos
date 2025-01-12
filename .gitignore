@@ -6,5 +6,7 @@
 .env
 .direnv/*
 !.direnv/.keep
-vendor/*
-!vendor/.keep
+.bin/*
+!.bin/.keep
+.cache/*
+!.cache/.keep

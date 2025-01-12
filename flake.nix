@@ -28,7 +28,6 @@
           pkgs.gnumake
           pkgs.go
           pkgs.delve
-          pkgs.goa
           pkgs.protobuf
           pkgs.protoc-gen-go
           pkgs.protoc-gen-go-grpc
@@ -106,6 +105,24 @@
             category = "devshell";
             help = "Run the application";
             command = "make run";
+          }
+          {
+            name = "example";
+            category = "devshell";
+            help = "Run application example";
+            command = "make example";
+          }
+          {
+            name = "gen";
+            category = "devshell";
+            help = "Generate project using goa";
+            command = "make gen";
+          }
+          {
+            name = "implementation";
+            category = "devshell";
+            help = "Generate project shell implementation";
+            command = "make implementation";
           }
           {
             name = "tidy";
