@@ -7,6 +7,7 @@ import (
 var _ = API("argos", func() {
 	Title("Argos Calculator Service")
 	Description("Service for multiplying numbers, a Goa teaser")
+	Version("1.0")
 	Server("argos", func() {
 		Host("localhost", func() {
 			URI("http://localhost:8000")

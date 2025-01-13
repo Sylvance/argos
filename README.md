@@ -1,6 +1,14 @@
 # Argos
 
-Golang project template using nix
+Golang project template using nix.
+
+## Prerequisites
+
+This template assumes you already have nix installed. If not, head over to https://github.com/DeterminateSystems/nix-installer
+and come back after the installation is done.
+
+- Nix. https://github.com/DeterminateSystems/nix-installer
+- Direnv. https://github.com/direnv/direnv
 
 ## How to set it up
 
